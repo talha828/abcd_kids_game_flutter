@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+
 class ShowStories extends StatelessWidget {
-  ShowStories({this.name});
-  final name;
-  StoryList(){
+  ShowStories({ this.name});
+final name;
+  poemList(){
     List<Widget> showText=[];
     for(var list in name){
       final text =Text(list,style: TextStyle(
-
           fontSize: 20,
           color: Colors.white
       ),);
@@ -15,7 +15,7 @@ class ShowStories extends StatelessWidget {
     return showText;
   }
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return  Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xe1ff8b31),
@@ -52,7 +52,7 @@ class ShowStories extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: StoryList(),
+                  children:  poemList(),
                 ),
               ),
             ),
@@ -61,7 +61,7 @@ class ShowStories extends StatelessWidget {
     );
   }
 }
-List<String>TheBoyWhoCriedWolf=[
+List<String> TheBoyWhoCriedWolf=[
 "Once upon a time, there lived a shepherd boy who was bored watching his flock of sheep on the hill",
 "  amuse himself, he shouted, “Wolf! Wolf! The sheep are being chased by the wolf!” The villagers came running to help the boy and save the sheep",
 "They found nothing and the boy just laughed looking at their angry faces",
@@ -74,7 +74,7 @@ List<String>TheBoyWhoCriedWolf=[
 
 "An old villager approached him and said, “People won’t believe liars even when they tell the truth. We’ll look for your sheep tomorrow morning. Let’s go home now”",
 ];
-List<String>TheGoldenEgg=[
+List<String> TheGoldenEgg=[
 "Once upon a time", "a farmer had a goose that laid a golden egg every day."," The egg provided enough money for the farmer and his wife for their day-to-day needs.", "The farmer and his wife were happy for a long time. But one day, the farmer got an idea and thought", "“Why should I take just one egg a day? Why can’t I take all of them at once and make a lot of money?”",
 
 
@@ -82,4 +82,3 @@ List<String>TheGoldenEgg=[
 
 "The English idiom “kill not the goose that lays the golden egg” was also derived from this classic story",
 ];
-

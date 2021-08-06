@@ -1,4 +1,4 @@
-import 'file:///C:/Users/iumeedsaher/abc_game/lib/Story/seletStories.dart';
+import 'seletStories.dart';
 import 'package:flutter/material.dart';
 import 'package:abc_flutter/styleButton.dart';
 class Stories extends StatelessWidget {
@@ -23,11 +23,11 @@ class Stories extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            StyleButton(text: 'The Boy Who Cried Wolf ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheBoyWhoCriedWolf,)));},),
-            StyleButton(text: 'The Golden Egg ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheGoldenEgg,)));},),
+            StyleButton(text: 'TheBoyWhoCriedWolf ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheBoyWhoCriedWolf,)));},),
+            StyleButton(text: 'TheGoldenEgg ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheGoldenEgg,)));},),
           ],
         ),
       ),
-    );;
+    );
   }
 }

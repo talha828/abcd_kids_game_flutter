@@ -5,6 +5,8 @@ import 'package:abc_flutter/styleButton.dart';
 import 'package:abc_flutter/writing/letter.dart';
 import 'package:abc_flutter/writing/number.dart';
 import 'package:flutter/material.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+
  class Menu extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
@@ -34,11 +36,13 @@ import 'package:flutter/material.dart';
                  crossAxisAlignment: CrossAxisAlignment.stretch,
                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                  children: [
-                   StyleButton(text: 'Writing letter',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> WriteLetter()));},),
-                   StyleButton(text: 'writing number',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Number()));},),
-                   StyleButton(text: 'Find Alphabet ',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Find()));},),
-                   StyleButton(text: 'poem ',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Poems()));},),
-                   StyleButton(text: 'Stories',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Stories()));},),
+                   StyleButton(text: 'Writing letter',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> WriteLetter()));
+                   AssetsAudioPlayer.newPlayer().open(Audio("assets/audio/kid-a.mp3"),);
+                   },),
+                   StyleButton(text: 'writing number',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Number())); AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));},),
+                   StyleButton(text: 'Find Alphabet ',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Find())); AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));},),
+                   StyleButton(text: 'poem ',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Poems())); AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));},),
+                   StyleButton(text: 'Stories',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Stories())); AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));},),
                  ],
                ),
              ),

@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:floodfill_image/floodfill_image.dart';
@@ -50,6 +51,7 @@ class _WriteLetterState extends State<WriteLetter> {
                 height: 70.0,
                 text: "next",
                 onPress: () {
+                  AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));
                   setState(() {
                     if(i<27) {
                       i++;

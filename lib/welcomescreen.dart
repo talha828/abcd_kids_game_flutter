@@ -1,6 +1,7 @@
 import 'package:abc_flutter/menu/menu.dart';
 import 'package:abc_flutter/menu/moremenu.dart';
 import 'package:abc_flutter/styleButton.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class WelcomeScreen extends StatefulWidget {
@@ -9,6 +10,14 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  @override
+  final assetsAudioPlayer = AssetsAudioPlayer();
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    assetsAudioPlayer.open(Audio('assets/music/11.mp3'));
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,9 +52,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                        ),
                      ),),
 
-                   StyleButton(text: 'play',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Menu()));},),
-                   StyleButton(text: 'More',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>MoreMenu()));},),
-
+                   StyleButton(text: 'play',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Menu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));setState(() {
+                     assetsAudioPlayer.pause();
+                   });},),
+                   StyleButton(text: 'More',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>MoreMenu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));setState(() {
+                     assetsAudioPlayer.pause();
+                   });},),
                    ],
         ),
       ),

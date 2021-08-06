@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
              ),)),
              elevation: 0.0,
            ),
-         body:WelcomeScreen() ,
+         body:WelcomeScreen(),
        ),
     );
   }

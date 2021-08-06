@@ -1,14 +1,17 @@
 import 'package:abc_flutter/styleButton.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:floodfill_image/floodfill_image.dart';
 import 'dart:ui';
+
 class Number extends StatefulWidget {
   @override
   _NumberState createState() => _NumberState();
 }
 
 class _NumberState extends State<Number> {
-  int i=1;
+  int i=0;
+  int j=0;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -31,13 +34,28 @@ class _NumberState extends State<Number> {
 
           mainAxisAlignment:MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height/2,
-              child: FloodFillImage(
-                imageProvider: AssetImage('assets/number/$i.png'),
-                fillColor: Colors.yellow,
-                avoidColor: [Colors.transparent, Colors.black],
-              ),
+            Row(
+
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height/2,
+                  width: MediaQuery.of(context).size.width/2,
+                  child: FloodFillImage(
+                    imageProvider: AssetImage('assets/number/$j.png'),
+                    fillColor: Colors.yellow,
+                    avoidColor: [Colors.transparent, Colors.black],
+                  ),
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height/2,
+                  width: MediaQuery.of(context).size.width/2,
+                  child: FloodFillImage(
+                    imageProvider: AssetImage('assets/number/$i.png'),
+                    fillColor: Colors.yellow,
+                    avoidColor: [Colors.transparent, Colors.black],
+                  ),
+                ),
+              ],
             ),
             Container(
               child: StyleButton(
@@ -45,12 +63,19 @@ class _NumberState extends State<Number> {
                 height: 70.0,
                 text: "next",
                 onPress: () {
+                  AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));
                   setState(() {
                     if(i<10) {
                       i++;
                     }
-                    else{
-                      Navigator.pop(context);
+                    if(i==10){
+                   setState(() {
+                     i=0;
+                     j++;
+                   });
+                   if(j>10){
+                     Navigator.pop(context);
+                   }
                     }
                   });
                 },
