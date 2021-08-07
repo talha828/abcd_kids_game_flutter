@@ -1,11 +1,29 @@
+import 'package:abc_flutter/styleButton.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
-class ShowStories extends StatelessWidget {
-  ShowStories({ this.name});
+class ShowStories extends StatefulWidget {
+  ShowStories({ this.name,this.name2});
 final name;
+final name2;
+
+  @override
+  _ShowStoriesState createState() => _ShowStoriesState();
+}
+
+class _ShowStoriesState extends State<ShowStories> {
+  final assetsAudioPlayer =AssetsAudioPlayer();
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    assetsAudioPlayer.open(Audio(widget.name2));
+    assetsAudioPlayer.play();
+  }
+
   poemList(){
     List<Widget> showText=[];
-    for(var list in name){
+    for(var list in widget.name){
       final text =Text(list,style: TextStyle(
           fontSize: 20,
           color: Colors.white
@@ -14,6 +32,7 @@ final name;
     }
     return showText;
   }
+
   @override
   Widget build(BuildContext context){
     return  Scaffold(
@@ -52,7 +71,21 @@ final name;
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children:  poemList(),
+                  children:  [
+                    Container(
+                      child: SizedBox(
+                        height: 400,
+                        child: ListView(
+                          children: poemList(),
+                        ),
+                      ),
+                    ),
+                    StyleButton(text: 'Back',onPress: (){
+                      setState(() {
+                        assetsAudioPlayer.pause();
+                      });
+                      Navigator.pop(context);}),
+                  ]
                 ),
               ),
             ),

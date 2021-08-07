@@ -42,7 +42,7 @@ final k;
                 ],
               ),
               onFlip: (){
-                AssetsAudioPlayer.newPlayer().open(Audio("assets/audio/kid-$k.mp3"));
+                AssetsAudioPlayer.newPlayer().open(Audio("assets/apple/$k.mp3"));
 
               },
             ),

@@ -23,8 +23,8 @@ class Stories extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            StyleButton(text: 'TheBoyWhoCriedWolf ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheBoyWhoCriedWolf,)));},),
-            StyleButton(text: 'TheGoldenEgg ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheGoldenEgg,)));},),
+            StyleButton(text: 'TheBoyWhoCriedWolf ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheBoyWhoCriedWolf,name2: 'assets/storey/1.mp3',)));},),
+            StyleButton(text: 'TheGoldenEgg ',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowStories(name: TheGoldenEgg,name2: 'assets/storey/2.mp3',)));},),
           ],
         ),
       ),

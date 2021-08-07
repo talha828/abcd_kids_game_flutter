@@ -11,6 +11,7 @@ class Number extends StatefulWidget {
 
 class _NumberState extends State<Number> {
   int i=0;
+  bool talha=false;
   int j=0;
   @override
   Widget build(BuildContext context) {
@@ -38,13 +39,13 @@ class _NumberState extends State<Number> {
 
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height/2,
-                  width: MediaQuery.of(context).size.width/2,
-                  child: FloodFillImage(
+                  height:talha? MediaQuery.of(context).size.height/2:MediaQuery.of(context).size.height/3,
+                  width:talha? MediaQuery.of(context).size.width/2:MediaQuery.of(context).size.width/3,
+                  child:talha? FloodFillImage(
                     imageProvider: AssetImage('assets/number/$j.png'),
                     fillColor: Colors.yellow,
                     avoidColor: [Colors.transparent, Colors.black],
-                  ),
+                  ):null,
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height/2,
@@ -68,10 +69,12 @@ class _NumberState extends State<Number> {
                     if(i<10) {
                       i++;
                     }
-                    if(i==10){
+
+                    if(i>9){
                    setState(() {
                      i=0;
                      j++;
+                     talha=true;
                    });
                    if(j>10){
                      Navigator.pop(context);
