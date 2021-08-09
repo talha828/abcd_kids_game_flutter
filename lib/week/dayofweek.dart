@@ -1,4 +1,5 @@
 import 'package:abc_flutter/styleButton.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
@@ -64,13 +65,13 @@ class _WeekState extends State<Week> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                StyleButton(text:'Monday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'Tuesday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'wednesday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'thursday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'Friday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'Saturday',onPress: (){},width: 200.0,height: 60.0,),
-                                StyleButton(text:'sunday',onPress: (){},width: 200.0,height: 60.0,),
+                                StyleButton(text:'Monday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/2.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'Tuesday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/3.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'wednesday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/4.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'thursday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/5.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'Friday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/6.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'Saturday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/7.mp3"));},width: 200.0,height: 60.0,),
+                                StyleButton(text:'sunday',onPress: (){AssetsAudioPlayer.newPlayer().open(Audio("assets/day/1.mp3"));},width: 200.0,height: 60.0,),
                               ],
                             ),
                           ),
