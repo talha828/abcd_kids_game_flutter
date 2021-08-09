@@ -12,6 +12,7 @@ class WriteLetter extends StatefulWidget {
 
 class _WriteLetterState extends State<WriteLetter> {
   int i = 1;
+  int j =2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,10 +52,11 @@ class _WriteLetterState extends State<WriteLetter> {
                 height: 70.0,
                 text: "next",
                 onPress: () {
-                  AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));
+                  AssetsAudioPlayer.newPlayer().open(Audio("assets/songs/1$j.mp3"));
                   setState(() {
                     if(i<27) {
                       i++;
+                      j++;
                     }
                     else{
                       Navigator.pop(context);

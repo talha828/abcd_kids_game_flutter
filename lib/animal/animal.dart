@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
@@ -7,6 +8,13 @@ class Animal extends StatefulWidget {
 }
 
 class _AnimalState extends State<Animal> {
+  bool talha=true;
+  bool talha1=true;
+  bool talha2=true;
+  bool talha3=true;
+  bool talha4=true;
+  bool talha5=true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +80,13 @@ class _AnimalState extends State<Animal> {
                                   ),)
                                 ],
                               ),
+                              onFlip: (){
+                                talha?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/lion.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/cub.mp3"));;
+                              setState(() {
+                                talha=talha?false:true;
+                              });
+                                },
+
                             ),
                           )),
                     ),
@@ -110,6 +125,12 @@ class _AnimalState extends State<Animal> {
                                   ),)
                                 ],
                               ),
+                              onFlip: (){
+                                talha1?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/donkey.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/foal.mp3"));;
+                                setState(() {
+                                  talha1=talha1?false:true;
+                                });
+                              },
                             ),
                           )),
                     ),
@@ -146,6 +167,12 @@ class _AnimalState extends State<Animal> {
                                 ),)
                               ],
                             ),
+                            onFlip: (){
+                              talha2?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/monkey.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/infant.mp3"));;
+                              setState(() {
+                                talha2=talha2?false:true;
+                              });
+                            },
                           ),
                         )),
                   ],
@@ -188,6 +215,12 @@ class _AnimalState extends State<Animal> {
                                   ),)
                                 ],
                               ),
+                              onFlip: (){
+                                talha3?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/cow.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/calf.mp3"));;
+                                setState(() {
+                                  talha3=talha3?false:true;
+                                });
+                              },
                             ),
                           )),
                     ),
@@ -226,6 +259,12 @@ class _AnimalState extends State<Animal> {
                                   ),)
                                 ],
                               ),
+                              onFlip: (){
+                                talha4?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/mouse.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/pup.mp3"));;
+                                setState(() {
+                                  talha4=talha4?false:true;
+                                });
+                              },
                             ),
                           )),
                     ),
@@ -262,6 +301,12 @@ class _AnimalState extends State<Animal> {
                                 ),)
                               ],
                             ),
+                            onFlip: (){
+                              talha5?AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/cat.mp3")):AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/kitten.mp3"));;
+                              setState(() {
+                                talha5=talha5?false:true;
+                              });
+                            },
                           ),
                         )),
                   ],

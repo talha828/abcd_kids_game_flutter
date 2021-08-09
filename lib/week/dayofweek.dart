@@ -52,7 +52,7 @@ class _WeekState extends State<Week> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                           StyleButton(text: "7 days=1 week",onPress: (){},width: 300.0,height: 80.0,),
-                                StyleButton(text:'Tap on card!',onPress: (){},width: 200.0,height: 70.0,),
+                                StyleButton(text:'Tap on card!!',onPress: (){},width: 200.0,height: 70.0,),
                               ],
                             ),
                           )),

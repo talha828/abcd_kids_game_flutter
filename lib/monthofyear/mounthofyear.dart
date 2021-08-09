@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:abc_flutter/styleButton.dart';
 import 'package:flip_card/flip_card.dart';
@@ -76,13 +77,13 @@ class _MounthOfYearState extends State<MounthOfYear> {
                                   children: [
                                     StyleButton(
                                       text: 'January',
-                                      onPress: () {},
+                                      onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/11.mp3"));},
                                       width: 130.0,
                                       height: 60.0,
                                     ),
                                     StyleButton(
                                       text: 'February ',
-                                      onPress: () {},
+                                      onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/12.mp3"));},
                                       width: 130.0,
                                       height: 60.0,
                                     ),
@@ -91,13 +92,13 @@ class _MounthOfYearState extends State<MounthOfYear> {
                                Row(children: [
                                  StyleButton(
                                    text: 'March',
-                                   onPress: () {},
+                                   onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/13.mp3"));},
                                    width: 130.0,
                                    height: 60.0,
                                  ),
                                  StyleButton(
                                    text: 'April',
-                                   onPress: () {},
+                                   onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/14.mp3"));},
                                    width: 130.0,
                                    height: 60.0,
                                  ),
@@ -106,13 +107,13 @@ class _MounthOfYearState extends State<MounthOfYear> {
                                children: [
                                  StyleButton(
                                    text: 'May',
-                                   onPress: () {},
+                                   onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/15.mp3"));},
                                    width: 130.0,
                                    height: 60.0,
                                  ),
                                  StyleButton(
                                    text: 'june',
-                                   onPress: () {},
+                                   onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/16.mp3"));},
                                    width: 130.0,
                                    height: 60.0,
                                  ),
@@ -121,13 +122,13 @@ class _MounthOfYearState extends State<MounthOfYear> {
                                 Row(children: [
                                   StyleButton(
                                     text: 'july',
-                                    onPress: () {},
+                                    onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/17.mp3"));},
                                     width: 130.0,
                                     height: 60.0,
                                   ),
                                   StyleButton(
                                     text: 'August',
-                                    onPress: () {},
+                                    onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/18.mp3"));},
                                     width: 130.0,
                                     height: 60.0,
                                   ),
@@ -135,7 +136,7 @@ class _MounthOfYearState extends State<MounthOfYear> {
                              Row(children: [
                                StyleButton(
                                  text: 'September',
-                                 onPress: () {},
+                                 onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/19.mp3"));},
                                  width: 200.0,
                                  height: 60.0,
                                ),
@@ -144,20 +145,20 @@ class _MounthOfYearState extends State<MounthOfYear> {
                                 Row(children: [
                                   StyleButton(
                                     text: 'october',
-                                    onPress: () {},
+                                    onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/20.mp3"));},
                                     width: 125.0,
                                     height: 60.0,
                                   ),
                                   StyleButton(
                                     text: 'November',
-                                    onPress: () {},
+                                    onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/21.mp3"));},
                                     width: 135.0,
                                     height: 60.0,
                                   ),
                                 ],),
                                 StyleButton(
                                   text: 'December',
-                                  onPress: () {},
+                                  onPress: () {AssetsAudioPlayer.newPlayer().open(Audio("assets/day/22.mp3"));},
                                   width: 200.0,
                                   height: 60.0,
                                 ),

@@ -52,10 +52,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                        ),
                      ),),
 
-                   StyleButton(text: 'play',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Menu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));setState(() {
+                   StyleButton(text: 'play',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Menu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/menusound/spell.mp3"));setState(() {
                      assetsAudioPlayer.pause();
                    });},),
-                   StyleButton(text: 'More',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>MoreMenu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));setState(() {
+                   StyleButton(text: 'More',width:200.0,height: 70.0,onPress: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>MoreMenu()));AssetsAudioPlayer.newPlayer().open(Audio("assets/more.mp3"));setState(() {
                      assetsAudioPlayer.pause();
                    });},),
                    ],

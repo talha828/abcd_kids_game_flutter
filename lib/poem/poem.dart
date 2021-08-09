@@ -28,11 +28,11 @@ class Poems extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            StyleButton(text: 'Twinkle, Twinkle',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowPoems(name: Twinkle,name2: "assets/music/5.mp3",)));},),
-            StyleButton(text: 'Jack And Jill',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: jack,name2: "assets/music/6.mp3",),));},),
+            StyleButton(text: 'Twinkle, Twinkle',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=> ShowPoems(name: Twinkle,name2: "assets/1.mp3",)));},),
+            StyleButton(text: 'Jack And Jill',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: jack,name2: "assets/2.mp3",),));},),
             StyleButton(text: 'Black Sheep',onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: Baa,name2: "assets/music/9.mp3",)));},),
             StyleButton(text: "Wee Willie Winkie",onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: wee,name2: "assets/music/10.mp3",),));},),
-            StyleButton(text: "My Cat Is Fat",onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: Fat,name2: "assets/music/5.mp3",),));},),
+            StyleButton(text: "My Cat Is Fat",onPress: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowPoems(name: Fat,name2: "assets/day/cat.mp3",),));},),
           ],
         ),
 

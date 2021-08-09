@@ -13,6 +13,7 @@ class _NumberState extends State<Number> {
   int i=0;
   bool talha=false;
   int j=0;
+  int k=1;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -64,21 +65,24 @@ class _NumberState extends State<Number> {
                 height: 70.0,
                 text: "next",
                 onPress: () {
-                  AssetsAudioPlayer.newPlayer().open(Audio("assets/music/4.mp3"));
+                  AssetsAudioPlayer.newPlayer().open(Audio("assets/counting/$k.wav"));
                   setState(() {
+                    if(j==10&&i==0){
+                      Navigator.pop(context);
+                    }
                     if(i<10) {
                       i++;
+                      k++;
                     }
 
                     if(i>9){
                    setState(() {
                      i=0;
-                     j++;
+                     if (j<10){
+                       j++;
+                     }
                      talha=true;
                    });
-                   if(j>10){
-                     Navigator.pop(context);
-                   }
                     }
                   });
                 },
